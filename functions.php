@@ -98,6 +98,65 @@ function elvis_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => 'Header Top Right',
+		'id'            => 'header_top_right',
+		'description' => __( 'This is a good place for a phone number or call to action.', 'ClickTime Design' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Header Bottom Right',
+		'id'            => 'header_bottom_right',
+		'description' => __( 'This could also be a phone number or some social media links.', 'ClickTime Design' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'After Single Content',
+		'id'            => 'after_single_content',
+		'description' => __( 'This will display at the end of any single content page, such as a blog entry.', 'ClickTime Design' ),
+		'before_widget' => '<div class="ctd-after-content">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="ctd-after-content">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer One',
+		'id'            => 'footer_one',
+		'description' => __( 'Add content to this footer widget area.', 'ClickTime Design' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3 class="footer-one">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Two',
+		'id'            => 'footer_two',
+		'description' => __( 'Add content to this footer widget area.', 'ClickTime Design' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3 class="footer-one">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Three',
+		'id'            => 'footer_three',
+		'description' => __( 'Add content to this footer widget area.', 'ClickTime Design' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3 class="footer-one">',
+		'after_title'   => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'elvis_widgets_init' );
 
