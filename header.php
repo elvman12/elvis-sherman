@@ -41,6 +41,20 @@
 				endif; ?>
 			</div><!-- .site-branding -->
 
+			<!-- Add the Top Right Header Widget Area -->
+			<div class="header-top-right">
+				<?php if ( is_active_sidebar( 'header_top_right' ) ) :
+					dynamic_sidebar( 'header_top_right' );
+				endif; ?>
+			</div>
+
+			<!-- Add the Bottom Right Header Widget Area -->
+			<div class="header-bottom-right">
+				<?php if ( is_active_sidebar( 'header_bottom_right' ) ) :
+					dynamic_sidebar( 'header_bottom_right' );
+				endif; ?>
+			</div>
+
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'elvis' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>

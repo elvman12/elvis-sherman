@@ -1,11 +1,8 @@
 <?php
 /**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
+ * The template for displaying the footer *
+ * Contains the closing of the #content div and all content after. *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials *
  * @package elvis
  */
 
@@ -15,9 +12,23 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'elvis' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'elvis' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'elvis' ), 'elvis', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
+
+			<!-- Begin Footer Widgets -->
+			<?php if ( is_active_sidebar( 'footer_one' ) ) :
+				dynamic_sidebar( 'footer_one' );
+			endif; ?>
+
+			<!-- Add a Footer Widget -->
+			<?php if ( is_active_sidebar( 'footer_two' ) ) :
+				dynamic_sidebar( 'footer_two' );
+			endif; ?>
+
+			<!-- Add a Footer Widget -->
+			<?php if ( is_active_sidebar( 'footer_three' ) ) :
+				dynamic_sidebar( 'footer_three' );
+			endif; ?>
+			<!-- End Footer Widgets -->
+
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
